@@ -1,0 +1,34 @@
+import { EventDriver, globalThisPolyfill } from "@duckform/shared";
+import { ViewportScrollEvent } from "../events";
+import { Engine } from "../models/Engine";
+
+export class ViewportScrollDriver extends EventDriver<Engine> {
+  request: number | null = null;
+
+  onScroll = (e: Event) => {
+    e.preventDefault();
+    this.request = globalThisPolyfill.requestAnimationFrame(() => {
+      this.dispatch(
+        new ViewportScrollEvent({
+          scrollX: this.contentWindow.scrollX,
+          scrollY: this.contentWindow.scrollY,
+          width: this.contentWindow.document.body.clientWidth,
+          height: this.contentWindow.document.body.clientHeight,
+          innerHeight: this.contentWindow.innerHeight,
+          innerWidth: this.contentWindow.innerWidth,
+          view: this.contentWindow,
+          target: e.target!,
+        }),
+      );
+      cancelAnimationFrame(this.request!);
+    });
+  };
+
+  attach() {
+    this.addEventListener("scroll", this.onScroll);
+  }
+
+  detach() {
+    this.removeEventListener("scroll", this.onScroll);
+  }
+}

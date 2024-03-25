@@ -1,0 +1,45 @@
+{
+  "name": "workspaces",
+  "version": "0.0.1-alpha.1",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "clean": "rm -rf pnpm-lock.yaml node_modules packages/*/{node_modules,dist,bun.lockb}",
+    "dev": "npx rsbuild dev",
+    "build": "bun run scripts/build.ts"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.8.1",
+    "@biomejs/biome": "^1.6.0",
+    "@duckform/core": "workspace:*",
+    "@duckform/react": "workspace:*",
+    "@duckform/settings-form": "workspace:*",
+    "@duckform/shared": "workspace:*",
+    "@formily/antd": "^2.3.1",
+    "@formily/core": "^2.3.1",
+    "@formily/json-schema": "^2.3.1",
+    "@formily/react": "^2.3.1",
+    "@formily/reactive": "^2.3.1",
+    "@formily/reactive-react": "^2.3.1",
+    "antd": "^4.24.15",
+    "classnames": "^2.5.1",
+    "react": "^18.2.*",
+    "react-dom": "^18.2.*",
+    "react-is": "^18.2.*",
+    "typescript": "^5.4.2"
+  },
+  "resolutions": {
+    "react": "^18.2.*",
+    "react-dom": "^18.2.*",
+    "react-is": "^18.2.*",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.5.2",
+    "@rsbuild/plugin-react": "0.5.2",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "father": "^4.4.0"
+  }
+}

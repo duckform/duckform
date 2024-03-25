@@ -1,0 +1,27 @@
+{
+  "name": "@duckform/shared",
+  "version": "0.0.1-alpha.1",
+  "license": "MIT",
+  "main": "./dist/lib",
+  "module": "./dist/esm",
+  "types": "./dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duckform/duckform.git"
+  },
+  "files": ["dist"],
+  "bugs": {
+    "url": "https://github.com/duckform/duckform/issues"
+  },
+  "homepage": "https://github.com/duckform/duckform#readme",
+  "scripts": {
+    "build": "npx father build"
+  },
+  "dependencies": {
+    "requestidlecallback": "^0.3.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

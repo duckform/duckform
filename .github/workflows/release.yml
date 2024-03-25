@@ -1,0 +1,70 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: Release CI
+
+on:
+  release:
+    types: 
+      - published
+
+permissions:
+  contents: write
+  discussions: write
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Parse Tag
+        id: parse_tag
+        run: |
+          # 获取标签名称
+          tag_name="${GITHUB_REF:10}"
+
+          tag="latest"
+          pre_release=false
+          # 检查是否预发布
+          if [[ $tag_name == *"alpha"* ]]; then
+            tag="alpha"
+          fi
+
+          if [[ $tag_name == *"beta"* ]]; then
+            tag="beta"
+          fi
+
+          echo "::set-output name=version::$tag_name"
+          echo "::set-output name=tag::$tag"
+      - uses: oven-sh/setup-bun@v1
+      - name: Install dependencies
+        run: |
+          bun i
+          bun run build
+        
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: |
+          # 更新 package.json 文件中的版本号
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/core/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/shared/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/react/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/settings-form/package.json
+
+          cd packages/core && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd -
+          cd packages/shared && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd -
+          cd packages/react && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd -
+          cd packages/react-form && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd -
+
+          release_notes="${{ github.event.release.body }}"
+          echo $release_notes >> CHANGELOG.md
+          git config --global user.email "charlzyx@qq.com"
+          git config --global user.name "charlzyx"
+          git add .
+          git commit -m '🎉 Release ${{steps.parse_tag.outputs.version}}'
+          git push https://${{secrets.GITHUB_TOKEN}}@github.com/charlzyx/charlzyx-gh-actions-test.git HEAD:master
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
