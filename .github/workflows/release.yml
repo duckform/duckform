@@ -41,8 +41,6 @@ jobs:
         run: |
           bun i
           bun run build
-        
-
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -54,10 +52,10 @@ jobs:
           sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/react/package.json
           sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/settings-form/package.json
 
-          cd packages/core && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
-          cd packages/shared && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
-          cd packages/react && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
-          cd packages/settings-form && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} packages/core 
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} packages/shared 
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} packages/react 
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} packages/settings-form 
 
           release_notes="${{ github.event.release.body }}"
           echo $release_notes >> CHANGELOG.md
