@@ -4,10 +4,13 @@ import path from "path";
 
 const byRoot = (...segs: string[]) => path.resolve(__dirname, "..", ...segs);
 
-const pkgs = fs
-  .readdirSync(byRoot("./packages"))
-  .map((item) => byRoot("./packages", item))
-  .filter((maybe) => fs.statSync(maybe).isDirectory());
+const pkgs = ["shared", "core", "react", "settings-form"].map((item) =>
+  byRoot("./packages", item),
+);
+// fs
+// .readdirSync(byRoot("./packages"))
+// .map((item) => byRoot("./packages", item))
+// .filter((maybe) => fs.statSync(maybe).isDirectory());
 
 for (const pkg of pkgs) {
   console.log("🚀 ~ pkg:", pkg);
