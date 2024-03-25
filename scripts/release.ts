@@ -6,6 +6,7 @@ const byRoot = (...segs: string[]) => path.resolve(__dirname, "..", ...segs);
 const args = process.argv.slice(2);
 
 const version = args[0];
+const tag = args[1];
 if (!version) {
   throw new Error(" publish version is requre ");
 }
@@ -33,7 +34,7 @@ for (const pkg of pkgs) {
   );
 
   try {
-    execSync("npm publish", {
+    execSync(`npm publish --tag ${tag}`, {
       cwd: pkg,
       stdio: "inherit",
     });
