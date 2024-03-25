@@ -41,23 +41,21 @@ jobs:
         run: |
           bun i
           bun run build
-        
-
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: |
           # 更新 package.json 文件中的版本号
-          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/core/package.json
-          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/shared/package.json
-          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/react/package.json
-          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" packages/settings-form/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" ./packages/core/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" ./packages/shared/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" ./packages/react/package.json
+          sed -i "s/\"version\": \".*\"/\"version\": \"${{steps.parse_tag.outputs.version}}\"/" ./packages/settings-form/package.json
 
-          cd packages/core && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
-          cd packages/shared && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
-          cd packages/react && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
-          cd packages/settings-form && npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} && cd ..
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} ./packages/core 
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} ./packages/shared 
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} ./packages/react 
+          npm publish --access=public --tag ${{steps.parse_tag.outputs.tag}} ./packages/settings-form 
 
           release_notes="${{ github.event.release.body }}"
           echo $release_notes >> CHANGELOG.md
