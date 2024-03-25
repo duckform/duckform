@@ -21,7 +21,7 @@ jobs:
         id: parse_tag
         run: |
           # 获取标签名称
-          tag_name="${GITHUB_REF:10}"
+          tag_name="${GITHUB_REF:11}"
 
           tag="latest"
           pre_release=false
