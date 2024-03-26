@@ -1,6 +1,6 @@
 {
   "name": "@duckform/core",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1-beta.1",
   "license": "MIT",
   "main": "./dist/lib",
   "module": "./dist/esm",
