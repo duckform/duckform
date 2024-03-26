@@ -22,3 +22,4 @@ export * from "./DataSourceSetter";
 export * from "./ValidatorSetter";
 export * from "./ReactionsSetter";
 export * from "./ExpressionSetter";
+export * from "./FormItemSwitcher";

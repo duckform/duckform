@@ -37,6 +37,10 @@ import {
   DrawerSetter,
   CollapseItem,
   ExpressionSetter,
+  DataSourceSetter,
+  ReactionsSetter,
+  ValidatorSetter,
+  FormItemSwitcher,
 } from "./components";
 
 export const SchemaField = createSchemaField({
@@ -76,5 +80,9 @@ export const SchemaField = createSchemaField({
     FormLayout,
     FormTab,
     ExpressionSetter,
+    DataSourceSetter,
+    ReactionsSetter,
+    ValidatorSetter,
+    FormItemSwitcher,
   },
 });
