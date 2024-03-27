@@ -1,4 +1,4 @@
-import { isValid } from "@duckform/shared";
+import { isValid } from "@duckform/core/shared";
 import cls from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 import { usePrefix } from "../hooks";

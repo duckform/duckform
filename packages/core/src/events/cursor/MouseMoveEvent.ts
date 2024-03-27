@@ -1,4 +1,4 @@
-import { ICustomEvent } from "@duckform/shared";
+import { ICustomEvent } from "../../shared";
 import { AbstractCursorEvent } from "./AbstractCursorEvent";
 
 export class MouseMoveEvent

@@ -1,4 +1,4 @@
-import { Event, globalThisPolyfill, uid } from "@duckform/shared";
+import { Event, globalThisPolyfill, uid } from "../shared";
 import { IEngineProps } from "../types";
 import { Cursor } from "./Cursor";
 import { Keyboard } from "./Keyboard";

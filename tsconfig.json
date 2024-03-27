@@ -10,10 +10,13 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "declaration": true,
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
     // workspaces path alias
-    // "paths": {
-    // 	"@duckform/*": ["./packages/*/src"]
-    // }
+    "paths": {
+      "@duckform/core": ["./packages/core/src"],
+      "@duckform/react/settings-form": ["./packages/react/src/settings-form"],
+      "@duckform/react": ["./packages/react/src"],
+      "@duckform/core/shared": ["./packages/core/src/shared"]
+    }
   }
 }

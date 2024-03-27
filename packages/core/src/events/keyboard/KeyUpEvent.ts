@@ -1,4 +1,4 @@
-import { ICustomEvent } from "@duckform/shared";
+import { ICustomEvent } from "../../shared";
 import { AbstractKeyboardEvent } from "./AbstractKeyboardEvent";
 
 export class KeyUpEvent extends AbstractKeyboardEvent implements ICustomEvent {

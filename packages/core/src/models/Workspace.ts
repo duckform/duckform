@@ -1,4 +1,4 @@
-import { EventContainer, ICustomEvent, uid } from "@duckform/shared";
+import { EventContainer, ICustomEvent, uid } from "../shared";
 import {
   HistoryGotoEvent,
   HistoryPushEvent,

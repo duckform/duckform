@@ -3,7 +3,7 @@ import {
   calcRectByStartEndPoint,
   isCrossRectInRect,
   isRectInRect,
-} from "@duckform/shared";
+} from "../shared";
 import { DragStopEvent } from "../events";
 import { CursorDragType, CursorType, Engine, TreeNode } from "../models";
 

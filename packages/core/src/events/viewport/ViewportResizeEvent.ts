@@ -1,4 +1,4 @@
-import { ICustomEvent } from "@duckform/shared";
+import { ICustomEvent } from "../../shared";
 import { AbstractViewportEvent } from "./AbstractViewportEvent";
 
 export class ViewportResizeEvent

@@ -1,5 +1,5 @@
 import { GlobalRegistry, IDesignerMiniLocales } from "@duckform/core";
-import { isPlainObj, isStr } from "@duckform/shared";
+import { isPlainObj, isStr } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import React, { Fragment } from "react";
 

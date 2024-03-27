@@ -1,4 +1,4 @@
-import { each } from "@duckform/shared";
+import { each } from "@duckform/core/shared";
 import cls from "classnames";
 import React, { useContext, Fragment, useRef, useLayoutEffect } from "react";
 import { DesignerLayoutContext } from "../context";

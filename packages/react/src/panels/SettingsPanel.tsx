@@ -1,4 +1,4 @@
-import { requestIdle } from "@duckform/shared";
+import { requestIdle } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import cls from "classnames";
 import React, { useEffect, useState } from "react";

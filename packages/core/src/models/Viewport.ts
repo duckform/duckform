@@ -10,7 +10,7 @@ import {
   isPointInRect,
   isRectInRect,
   requestIdle,
-} from "@duckform/shared";
+} from "../shared";
 import { action, define, observable } from "@formily/reactive";
 import { Engine } from "./Engine";
 import { TreeNode } from "./TreeNode";

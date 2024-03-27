@@ -9,6 +9,18 @@
     "npm": ">=3.0.0"
   },
   "files": ["dist"],
+  "exports": {
+    ".": {
+      "default": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts",
+      "require": "./dist/lib/index.js"
+    },
+    "./settings-form": {
+      "default": "./dist/esm/settings-form/index.js",
+      "types": "./dist/esm/index.d.ts",
+      "require": "./dist/lib/settings-form/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/duckform/duckform.git"
@@ -21,12 +33,16 @@
     "build": "npx father build"
   },
   "dependencies": {
-    "@babel/parser": "^7.23.9",
     "@duckform/core": "workspace:*",
-    "@duckform/shared": "workspace:*",
-    "dateformat": "^4.5.1"
+    "@monaco-editor/loader": "^1.4.0",
+    "@monaco-editor/react": "^4.6.0",
+    "dateformat": "^4.5.1",
+    "monaco-editor": "^0.47.0",
+    "react-color": "^2.19.3",
+    "react-tiny-popover": "^8.0.4"
   },
   "devDependencies": {
+    "@types/react-color": "^3.0.12",
     "@types/dateformat": "^5.0.2"
   },
   "publishConfig": {

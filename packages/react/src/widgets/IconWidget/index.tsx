@@ -1,4 +1,4 @@
-import { isFn, isObj, isPlainObj, isStr } from "@duckform/shared";
+import { isFn, isObj, isPlainObj, isStr } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import { Tooltip, TooltipProps } from "antd";
 import cls from "classnames";

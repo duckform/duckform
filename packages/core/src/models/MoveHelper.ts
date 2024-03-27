@@ -5,7 +5,7 @@ import {
   calcDistancePointToEdge,
   isNearAfter,
   isPointInRect,
-} from "@duckform/shared";
+} from "../shared";
 import { action, define, observable } from "@formily/reactive";
 import { DragNodeEvent, DropNodeEvent } from "../events";
 import { CursorDragType } from "./Cursor";

@@ -1,4 +1,4 @@
-import { KeyCode, getKeyCodeFromEvent } from "@duckform/shared";
+import { KeyCode, getKeyCodeFromEvent } from "../../shared";
 import { IEngineContext } from "../../types";
 
 export class AbstractKeyboardEvent {

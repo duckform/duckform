@@ -1,5 +1,5 @@
 import { Viewport as ViewportType } from "@duckform/core";
-import { globalThisPolyfill, requestIdle } from "@duckform/shared";
+import { globalThisPolyfill, requestIdle } from "@duckform/core/shared";
 import cls from "classnames";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { usePrefix, useViewport } from "../hooks";

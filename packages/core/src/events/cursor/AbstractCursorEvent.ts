@@ -1,4 +1,4 @@
-import { globalThisPolyfill } from "@duckform/shared";
+import { globalThisPolyfill } from "../../shared";
 import { IEngineContext } from "../../types";
 
 export interface ICursorEventOriginData {

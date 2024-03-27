@@ -4,7 +4,7 @@ import {
   Rect,
   calcOffsetOfSnapLineSegmentToEdge,
   calcRectOfAxisLineSegment,
-} from "@duckform/shared";
+} from "../shared";
 import { TransformHelper } from "./TransformHelper";
 import { TreeNode } from "./TreeNode";
 

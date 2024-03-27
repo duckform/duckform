@@ -1,5 +1,5 @@
 import { CursorDragType, CursorStatus } from "@duckform/core";
-import { calcRectByStartEndPoint } from "@duckform/shared";
+import { calcRectByStartEndPoint } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import cls from "classnames";
 import React from "react";

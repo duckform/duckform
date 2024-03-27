@@ -1,5 +1,5 @@
 import { TreeNode, Viewport } from "@duckform/core";
-import { globalThisPolyfill } from "@duckform/shared";
+import { globalThisPolyfill } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import cls from "classnames";
 import React, { useRef, useLayoutEffect } from "react";

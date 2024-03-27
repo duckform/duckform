@@ -1,5 +1,5 @@
 import { CursorDragType, CursorStatus, TreeNode } from "@duckform/core";
-import { LayoutObserver } from "@duckform/shared";
+import { LayoutObserver } from "@duckform/core/shared";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useDesigner } from "./useDesigner";
 import { useViewport } from "./useViewport";

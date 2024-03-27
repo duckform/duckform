@@ -1,4 +1,4 @@
-import { each } from "@duckform/shared";
+import { each } from "./shared";
 import { Path } from "@formily/path";
 import { observable } from "@formily/reactive";
 import { isBehaviorHost } from "./externals";

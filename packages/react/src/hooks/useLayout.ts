@@ -1,4 +1,4 @@
-import { globalThisPolyfill } from "@duckform/shared";
+import { globalThisPolyfill } from "@duckform/core/shared";
 import { useContext } from "react";
 import { DesignerLayoutContext } from "../context";
 import { IDesignerLayoutContext } from "../types";

@@ -1,5 +1,5 @@
-import { EventDriver } from "@duckform/shared";
-import { globalThisPolyfill } from "@duckform/shared";
+import { EventDriver } from "../shared";
+import { globalThisPolyfill } from "../shared";
 import { ResizeObserver } from "@juggle/resize-observer";
 import { ViewportResizeEvent } from "../events";
 import { Engine } from "../models/Engine";

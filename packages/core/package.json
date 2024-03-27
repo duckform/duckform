@@ -9,6 +9,18 @@
     "npm": ">=3.0.0"
   },
   "files": ["dist"],
+  "exports": {
+    ".": {
+      "default": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts",
+      "require": "./dist/lib/index.js"
+    },
+    "./shared": {
+      "default": "./dist/esm/shared/index.js",
+      "types": "./dist/esm/index.d.ts",
+      "require": "./dist/lib/shared/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/duckform/duckform.git"
@@ -21,7 +33,6 @@
     "build": "npx father build"
   },
   "dependencies": {
-    "@duckform/shared": "workspace:*",
     "@formily/json-schema": "^2.3.1",
     "@formily/path": "^2.3.1",
     "@formily/reactive": "^2.3.1",

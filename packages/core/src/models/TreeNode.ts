@@ -1,4 +1,4 @@
-import { each, isFn, uid } from "@duckform/shared";
+import { each, isFn, uid } from "../shared";
 import { action, define, observable, toJS } from "@formily/reactive";
 import {
   AppendNodeEvent,
@@ -33,9 +33,7 @@ export interface ITreeNode {
   children?: ITreeNode[];
 }
 
-export interface INodeFinder {
-  (node: TreeNode): boolean;
-}
+export type INodeFinder = (node: TreeNode) => boolean;
 
 const TreeNodes = new Map<string, TreeNode>();
 
@@ -381,10 +379,10 @@ export class TreeNode {
 
   distanceTo(node: TreeNode) {
     if (this.root !== node.root) {
-      return Infinity;
+      return Number.POSITIVE_INFINITY;
     }
     if (this.parent !== node.parent) {
-      return Infinity;
+      return Number.POSITIVE_INFINITY;
     }
     return Math.abs(this.index - node.index);
   }

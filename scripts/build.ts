@@ -4,9 +4,7 @@ import path from "path";
 
 const byRoot = (...segs: string[]) => path.resolve(__dirname, "..", ...segs);
 
-const pkgs = ["shared", "core", "react", "settings-form"].map((item) =>
-  byRoot("./packages", item),
-);
+const pkgs = ["core", "react"].map((item) => byRoot("./packages", item));
 // fs
 // .readdirSync(byRoot("./packages"))
 // .map((item) => byRoot("./packages", item))

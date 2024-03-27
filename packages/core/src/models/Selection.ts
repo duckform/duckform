@@ -1,4 +1,4 @@
-import { isArr, isStr } from "@duckform/shared";
+import { isArr, isStr } from "../shared";
 import { action, define, observable } from "@formily/reactive";
 import { SelectNodeEvent, UnSelectNodeEvent } from "../events";
 import { Operation } from "./Operation";

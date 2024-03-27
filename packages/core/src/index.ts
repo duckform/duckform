@@ -1,6 +1,6 @@
 import * as Core from "./exports";
 export * from "./exports";
-import { globalThisPolyfill } from "@duckform/shared";
+import { globalThisPolyfill } from "./shared";
 
 const AnyGlobal = globalThisPolyfill as any;
 

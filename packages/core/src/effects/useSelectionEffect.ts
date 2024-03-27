@@ -1,4 +1,4 @@
-import { KeyCode, Point } from "@duckform/shared";
+import { KeyCode, Point } from "../shared";
 import { MouseClickEvent } from "../events";
 import { CursorStatus, Engine } from "../models";
 

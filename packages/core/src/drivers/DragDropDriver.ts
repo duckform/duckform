@@ -1,4 +1,4 @@
-import { EventDriver } from "@duckform/shared";
+import { EventDriver } from "../shared";
 import { DragMoveEvent, DragStartEvent, DragStopEvent } from "../events";
 import { Engine } from "../models/Engine";
 

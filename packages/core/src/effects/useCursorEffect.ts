@@ -1,4 +1,4 @@
-import { requestIdle } from "@duckform/shared";
+import { requestIdle } from "../shared";
 import {
   DragMoveEvent,
   DragStartEvent,

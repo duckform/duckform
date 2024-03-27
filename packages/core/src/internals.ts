@@ -1,5 +1,4 @@
-import { each, isPlainObj } from "@duckform/shared";
-import { globalThisPolyfill } from "@duckform/shared";
+import { each, isPlainObj, globalThisPolyfill } from "./shared";
 
 export const lowerSnake = (str: string) => {
   return String(str).replace(/\s+/g, "_").toLocaleLowerCase();

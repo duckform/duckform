@@ -4,7 +4,7 @@ import {
   Point,
   calcAutoScrollBasicInfo,
   scrollAnimate,
-} from "@duckform/shared";
+} from "../shared";
 import { DragMoveEvent, DragStartEvent, DragStopEvent } from "../events";
 import { CursorStatus, Engine, Viewport } from "../models";
 

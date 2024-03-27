@@ -14,7 +14,7 @@ import {
   calcSpaceBlockOfRect,
   isEqualRect,
   isLineSegment,
-} from "@duckform/shared";
+} from "../shared";
 import { action, define, observable } from "@formily/reactive";
 import { CursorDragType } from "./Cursor";
 import { Operation } from "./Operation";

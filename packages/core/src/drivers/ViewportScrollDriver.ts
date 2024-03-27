@@ -1,4 +1,4 @@
-import { EventDriver, globalThisPolyfill } from "@duckform/shared";
+import { EventDriver, globalThisPolyfill } from "../shared";
 import { ViewportScrollEvent } from "../events";
 import { Engine } from "../models/Engine";
 

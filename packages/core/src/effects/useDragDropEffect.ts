@@ -1,4 +1,4 @@
-import { Point } from "@duckform/shared";
+import { Point } from "../shared";
 import {
   DragMoveEvent,
   DragStartEvent,

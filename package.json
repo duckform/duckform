@@ -13,8 +13,6 @@
     "@biomejs/biome": "^1.6.0",
     "@duckform/core": "workspace:*",
     "@duckform/react": "workspace:*",
-    "@duckform/settings-form": "workspace:*",
-    "@duckform/shared": "workspace:*",
     "@formily/antd": "^2.3.1",
     "@formily/core": "^2.3.1",
     "@formily/json-schema": "^2.3.1",

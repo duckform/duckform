@@ -1,4 +1,4 @@
-import { Event, IEventProps } from "@duckform/shared";
+import { Event, IEventProps } from "./shared";
 import { ISchema } from "@formily/json-schema";
 import {
   Engine,

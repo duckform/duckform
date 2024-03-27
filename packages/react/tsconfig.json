@@ -1,5 +1,13 @@
 {
   "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@duckform/react": ["./src"],
+      "@duckform/core": ["../core/src"],
+      "@duckform/core/shared": ["../core/src/shared"]
+    }
+  },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["./src/__tests__/*", "./esm/*", "./lib/*"]
 }

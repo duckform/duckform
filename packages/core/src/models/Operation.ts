@@ -1,4 +1,4 @@
-import { ICustomEvent, cancelIdle, isFn, requestIdle } from "@duckform/shared";
+import { ICustomEvent, cancelIdle, isFn, requestIdle } from "../shared";
 import { Engine } from "./Engine";
 import { Hover } from "./Hover";
 import { MoveHelper } from "./MoveHelper";

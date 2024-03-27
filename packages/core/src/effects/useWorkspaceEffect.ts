@@ -1,4 +1,4 @@
-import { ICustomEvent } from "@duckform/shared";
+import { ICustomEvent } from "../shared";
 import { SelectNodeEvent } from "../events";
 import { Engine } from "../models";
 import { IEngineContext } from "../types";

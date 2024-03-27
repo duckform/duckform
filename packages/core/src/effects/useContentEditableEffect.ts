@@ -1,4 +1,4 @@
-import { globalThisPolyfill, requestIdle } from "@duckform/shared";
+import { globalThisPolyfill, requestIdle } from "../shared";
 import { Path } from "@formily/path";
 import { MouseClickEvent, MouseDoubleClickEvent } from "../events";
 import { Engine, TreeNode } from "../models";

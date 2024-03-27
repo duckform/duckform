@@ -1,5 +1,5 @@
 import { Workspace } from "@duckform/core";
-import { globalThisPolyfill } from "@duckform/shared";
+import { globalThisPolyfill } from "@duckform/core/shared";
 import { useContext } from "react";
 import { WorkspaceContext } from "../context";
 import { useDesigner } from "./useDesigner";

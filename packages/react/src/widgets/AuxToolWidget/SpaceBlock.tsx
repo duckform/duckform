@@ -1,5 +1,5 @@
 import { CursorStatus } from "@duckform/core";
-import { ILineSegment, calcRectOfAxisLineSegment } from "@duckform/shared";
+import { ILineSegment, calcRectOfAxisLineSegment } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import React, { Fragment } from "react";
 import { useCursor, usePrefix, useTransformHelper } from "../../hooks";

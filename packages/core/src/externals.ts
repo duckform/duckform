@@ -1,4 +1,4 @@
-import { isArr } from "@duckform/shared";
+import { isArr } from "./shared";
 import { untracked } from "@formily/reactive";
 import { mergeLocales } from "./internals";
 import { Engine, TreeNode } from "./models";

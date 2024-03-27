@@ -5,7 +5,10 @@ import {
   DragStopEvent,
   Engine,
 } from "@duckform/core";
-import { calcSpeedFactor, createUniformSpeedAnimation } from "@duckform/shared";
+import {
+  calcSpeedFactor,
+  createUniformSpeedAnimation,
+} from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import React, { useRef } from "react";
 import { useDesigner, usePrefix, useScreen } from "../../hooks";

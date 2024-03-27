@@ -1,4 +1,4 @@
-import { globalThisPolyfill, isValidNumber } from "@duckform/shared";
+import { globalThisPolyfill, isValidNumber } from "../shared";
 import { action, define, observable } from "@formily/reactive";
 import { Engine } from "./Engine";
 

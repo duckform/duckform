@@ -3,7 +3,7 @@ import {
   Rect,
   calcDistanceOfSnapLineToEdges,
   calcExtendsLineSegmentOfRect,
-} from "@duckform/shared";
+} from "../shared";
 import { SnapLine } from "./SnapLine";
 import { TransformHelper } from "./TransformHelper";
 import { TreeNode } from "./TreeNode";

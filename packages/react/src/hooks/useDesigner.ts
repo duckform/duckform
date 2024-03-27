@@ -1,10 +1,8 @@
 import { Engine } from "@duckform/core";
-import { globalThisPolyfill, isFn } from "@duckform/shared";
+import { globalThisPolyfill, isFn } from "@duckform/core/shared";
 import { useContext, useEffect } from "react";
 import { DesignerEngineContext } from "../context";
-export interface IEffects {
-  (engine: Engine): void;
-}
+export type IEffects = (engine: Engine) => void;
 
 export const useDesigner = (effects?: IEffects): Engine => {
   const designer: Engine =

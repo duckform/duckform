@@ -4,7 +4,7 @@ import {
   DragMoveEvent,
   TreeNode,
 } from "@duckform/core";
-import { isFn } from "@duckform/shared";
+import { isFn } from "@duckform/core/shared";
 import { autorun } from "@formily/reactive";
 import { observer } from "@formily/reactive-react";
 import cls from "classnames";

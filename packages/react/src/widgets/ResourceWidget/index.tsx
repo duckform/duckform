@@ -4,7 +4,7 @@ import {
   isResourceHost,
   isResourceList,
 } from "@duckform/core";
-import { isFn } from "@duckform/shared";
+import { isFn } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import cls from "classnames";
 import React, { useState } from "react";

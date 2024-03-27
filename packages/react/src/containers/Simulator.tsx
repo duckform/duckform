@@ -1,5 +1,5 @@
 import { ScreenType } from "@duckform/core";
-import { requestIdle } from "@duckform/shared";
+import { requestIdle } from "@duckform/core/shared";
 import { observer } from "@formily/reactive-react";
 import React from "react";
 import { useScreen } from "../hooks";

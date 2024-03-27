@@ -1,4 +1,4 @@
-import { EventDriver } from "@duckform/shared";
+import { EventDriver } from "../shared";
 import { MouseMoveEvent } from "../events";
 import { Engine } from "../models/Engine";
 export class MouseMoveDriver extends EventDriver<Engine> {

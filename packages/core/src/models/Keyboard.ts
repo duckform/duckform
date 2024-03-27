@@ -1,4 +1,4 @@
-import { KeyCode } from "@duckform/shared";
+import { KeyCode } from "../shared";
 import { action, define, observable } from "@formily/reactive";
 import { AbstractKeyboardEvent } from "../events/keyboard/AbstractKeyboardEvent";
 import { IEngineContext } from "../types";

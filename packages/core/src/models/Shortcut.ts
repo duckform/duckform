@@ -1,4 +1,4 @@
-import { KeyCode, isFn } from "@duckform/shared";
+import { KeyCode, isFn } from "../shared";
 import { IEngineContext } from "../types";
 
 export { KeyCode };
