@@ -36,7 +36,8 @@
     "@formily/json-schema": "^2.3.1",
     "@formily/path": "^2.3.1",
     "@formily/reactive": "^2.3.1",
-    "@juggle/resize-observer": "^3.4.0"
+    "@juggle/resize-observer": "^3.4.0",
+    "requestidlecallback": "^0.3.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
