@@ -62,7 +62,9 @@ export const createResource = (...sources: IResourceCreator[]): IResource[] => {
   return sources.reduce((buf, source) => {
     const elements = source.elements;
     const sourceName = typeof source.title === "string" ? source.title : "";
-    elements[0].sourceName = elements[0].sourceName ?? sourceName;
+    if (elements?.[0]) {
+      elements[0].sourceName = elements[0].sourceName ?? sourceName;
+    }
 
     return buf.concat({
       ...source,
