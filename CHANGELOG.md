@@ -6,3 +6,4 @@
 🐛 fix: new TreeNode displayName  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.4
 fix: 🐛 missing define displayName in TreeNode   **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.5
 fix: 🐛 remove displayName and reUse sourceName in TreeNode  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.6
+fix: 🐛 remove displayName and reUse sourceName in TreeNode **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.7
