@@ -18,7 +18,7 @@ export const NodeTitleWidget: React.FC<
   const node = takeNode();
   return (
     <Fragment>
-      {node.sourceName || node.getMessage("title") || node.componentName}
+      {node.resourceName || node.getMessage("title") || node.componentName}
     </Fragment>
   );
 });

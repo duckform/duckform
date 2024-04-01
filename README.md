@@ -16,6 +16,7 @@
 - [x] TypeScript@5.x & React@18.x 依赖升级，类型修复
 - [x] 简化构建 rollup -> father, 运行环境 [bun](https://bun.sh)
 - [x] `@duckform/core/shared#uid` 增加 `uid__xxxx` 前缀
+- [x] `@duckform/core/TreeNode` 增加 `resourceName` 
 - [] sandbox
 
 可能会做的：

@@ -61,9 +61,9 @@ export const createBehavior = (
 export const createResource = (...sources: IResourceCreator[]): IResource[] => {
   return sources.reduce((buf, source) => {
     const elements = source.elements;
-    const sourceName = typeof source.title === "string" ? source.title : "";
+    const resourceName = typeof source.title === "string" ? source.title : "";
     if (elements?.[0]) {
-      elements[0].sourceName = elements[0].sourceName ?? sourceName;
+      elements[0].resourceName = elements[0].resourceName ?? resourceName;
     }
 
     return buf.concat({

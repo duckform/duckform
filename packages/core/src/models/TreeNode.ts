@@ -25,6 +25,7 @@ import { Operation } from "./Operation";
 export interface ITreeNode {
   componentName?: string;
   sourceName?: string;
+  resourceName?: string;
   operation?: Operation;
   hidden?: boolean;
   isSourceNode?: boolean;
@@ -116,6 +117,8 @@ export class TreeNode {
   componentName = "NO_NAME_COMPONENT";
 
   sourceName = "";
+
+  resourceName = "";
 
   props: ITreeNode["props"] = {};
 
@@ -700,6 +703,7 @@ export class TreeNode {
         id: uid(),
         componentName: this.componentName,
         sourceName: this.sourceName,
+        resourceName: this.resourceName,
         props: toJS(this.props),
         children: [],
       },
@@ -739,6 +743,9 @@ export class TreeNode {
         if (node.sourceName) {
           this.sourceName = node.sourceName;
         }
+        if (node.resourceName) {
+          this.resourceName = node.resourceName;
+        }
         this.props = node.props ?? {};
         if (node.hidden) {
           this.hidden = node.hidden;
@@ -758,6 +765,7 @@ export class TreeNode {
       id: this.id,
       componentName: this.componentName,
       sourceName: this.sourceName,
+      resourceName: this.resourceName,
       props: toJS(this.props),
       hidden: this.hidden,
       children: this.children.map((treeNode) => {
