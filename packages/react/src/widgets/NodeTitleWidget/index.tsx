@@ -8,8 +8,9 @@ export interface INodeTitleWidgetProps {
 export const NodeTitleWidget: React.FC<
   React.PropsWithChildren<INodeTitleWidgetProps>
 > = observer((props) => {
+  const sourceNode = props.node;
   const takeNode = () => {
-    const node = props.node;
+    const node = sourceNode;
     if (node.componentName === "$$ResourceNode$$") {
       return node.children[0];
     }
@@ -18,7 +19,7 @@ export const NodeTitleWidget: React.FC<
   const node = takeNode();
   return (
     <Fragment>
-      {node.getMessage("title") || node.displayName || node.componentName}
+      {sourceNode.sourceName || node.getMessage("title") || node.componentName}
     </Fragment>
   );
 });
