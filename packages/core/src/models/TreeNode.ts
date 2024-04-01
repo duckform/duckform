@@ -152,6 +152,7 @@ export class TreeNode {
 
   makeObservable() {
     define(this, {
+      displayName: observable.ref,
       componentName: observable.ref,
       props: observable,
       hidden: observable.ref,
@@ -166,6 +167,7 @@ export class TreeNode {
       remove: action,
       setProps: action,
       setChildren: action,
+      setDisplayName: action,
       setComponentName: action,
     });
   }
@@ -520,6 +522,10 @@ export class TreeNode {
     this.componentName = componentName;
   }
 
+  setDisplayName(displayName: string) {
+    this.displayName = displayName;
+  }
+
   prepend(...nodes: TreeNode[]) {
     if (nodes.some((node) => node.contains(this))) return [];
     const originSourceParents = nodes.map((node) => node.parent);
@@ -702,6 +708,7 @@ export class TreeNode {
     const newNode = new TreeNode(
       {
         id: uid(),
+        displayName: this.displayName,
         componentName: this.componentName,
         sourceName: this.sourceName,
         props: toJS(this.props),
@@ -737,6 +744,9 @@ export class TreeNode {
           TreeNodes.set(node.id, this);
           this.id = node.id;
         }
+        if (node.displayName) {
+          this.displayName = node.displayName;
+        }
         if (node.componentName) {
           this.componentName = node.componentName;
         }
@@ -760,6 +770,7 @@ export class TreeNode {
   serialize(): ITreeNode {
     return {
       id: this.id,
+      displayName: this.displayName,
       componentName: this.componentName,
       sourceName: this.sourceName,
       props: toJS(this.props),
