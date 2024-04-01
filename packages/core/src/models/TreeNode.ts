@@ -132,6 +132,7 @@ export class TreeNode {
       return node;
     }
     this.id = node!.id || uid();
+    this.displayName = node.displayName;
     if (parent) {
       this.parent = parent;
       this.depth = parent.depth + 1;
