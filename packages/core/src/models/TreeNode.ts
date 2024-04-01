@@ -23,7 +23,6 @@ import {
 import { Operation } from "./Operation";
 
 export interface ITreeNode {
-  displayName?: string;
   componentName?: string;
   sourceName?: string;
   operation?: Operation;
