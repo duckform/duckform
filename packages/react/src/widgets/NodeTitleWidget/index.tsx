@@ -17,7 +17,8 @@ export const NodeTitleWidget: React.FC<
   };
   const node = takeNode();
   return (
-    // biome-ignore lint/complexity/noUselessFragments: <explanation>
-    <Fragment>{node.getMessage("title") || node.componentName}</Fragment>
+    <Fragment>
+      {node.getMessage("title") || node.displayName || node.componentName}
+    </Fragment>
   );
 });

@@ -63,6 +63,8 @@ export const createResource = (...sources: IResourceCreator[]): IResource[] => {
     return buf.concat({
       ...source,
       node: new TreeNode({
+        displayName:
+          typeof source.title === "string" ? source.title : undefined,
         componentName: "$$ResourceNode$$",
         isSourceNode: true,
         children: source.elements || [],
