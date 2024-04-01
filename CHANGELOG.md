@@ -8,3 +8,4 @@ fix: 🐛 missing define displayName in TreeNode   **Full Changelog**: https:
 fix: 🐛 remove displayName and reUse sourceName in TreeNode  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.6
 fix: 🐛 remove displayName and reUse sourceName in TreeNode **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.7
 feat: 使用 TreeNode sourceName 字段作为节点展示字段给 NodeTitleWeight 用  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.8
+fix: 🐛 fix NodeTitleWidget **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.9
