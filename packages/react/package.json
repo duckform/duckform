@@ -1,6 +1,6 @@
 {
   "name": "@duckform/react",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "license": "MIT",
   "main": "./dist/lib",
   "module": "./dist/esm",
