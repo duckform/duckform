@@ -11,14 +11,10 @@
   "files": ["dist"],
   "exports": {
     ".": {
-      "default": "./dist/esm/index.js",
-      "types": "./dist/esm/index.d.ts",
-      "require": "./dist/lib/index.js"
+      "default": "./dist/esm/index.js"
     },
     "./shared": {
-      "default": "./dist/esm/shared/index.js",
-      "types": "./dist/esm/index.d.ts",
-      "require": "./dist/lib/shared/index.js"
+      "default": "./dist/esm/shared/index.js"
     }
   },
   "repository": {

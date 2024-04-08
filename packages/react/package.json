@@ -11,14 +11,10 @@
   "files": ["dist"],
   "exports": {
     ".": {
-      "default": "./dist/esm/index.js",
-      "types": "./dist/esm/index.d.ts",
-      "require": "./dist/lib/index.js"
+      "default": "./dist/esm/index.js"
     },
     "./settings-form": {
-      "default": "./dist/esm/settings-form/index.js",
-      "types": "./dist/esm/index.d.ts",
-      "require": "./dist/lib/settings-form/index.js"
+      "default": "./dist/esm/settings-form/index.js"
     }
   },
   "repository": {
