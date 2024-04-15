@@ -12,3 +12,4 @@ fix: 🐛 fix NodeTitleWidget **Full Changelog**: https://github.com/duckform/d
 refactor(core): 💡 keep TreeNode sourceName, replace by resourceName  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.9...v0.1.0-alpha.10
 fix: build error: Default condition should be last one, case by package.json exports fileds config bad.  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.10...v0.1.0-alpha.11
 **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.11...v0.1.0-alpha.12
+**Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.12...v0.1.0-alpha.13
