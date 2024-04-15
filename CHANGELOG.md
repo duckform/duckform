@@ -11,3 +11,4 @@ feat: 使用 TreeNode sourceName 字段作为节点展示字段给 NodeTitleWeig
 fix: 🐛 fix NodeTitleWidget **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.1...v0.1.0-alpha.9
 refactor(core): 💡 keep TreeNode sourceName, replace by resourceName  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.9...v0.1.0-alpha.10
 fix: build error: Default condition should be last one, case by package.json exports fileds config bad.  **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.10...v0.1.0-alpha.11
+**Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.11...v0.1.0-alpha.12
