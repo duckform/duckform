@@ -15,3 +15,4 @@ fix: build error: Default condition should be last one, case by package.json exp
 **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.12...v0.1.0-alpha.13
 **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.13...v0.1.0-alpha.14
 **Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.14...v0.1.0-alpha.15
+**Full Changelog**: https://github.com/duckform/duckform/compare/v0.1.0-alpha.15...v0.1.0-alpha.16
